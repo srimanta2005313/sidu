@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #6C63FF;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .logo {
+            margin-right: 30px;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            margin-left: auto;
+        }
+
+        .nav-links a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+
+        .hero-section {
+            background-image: url(h.gif);
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .hero-section .content {
+            max-width: 600px;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        .hero-section h1 {
+            font-size: 55px;
+            font-weight: 700;
+            margin-bottom: 170px;
+            line-height: 1.2;
+            animation: textFadeIn 2s ease-in-out;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            margin-bottom: 280px;
+            animation: textFadeIn 2.5s ease-in-out;
+        }
+
+        .cta-btn {
+            background-color: #FFD700;
+            padding: 15px 40px;
+            color: #333;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
+            animation: buttonBounce 3s ease-in-out infinite;
+        }
+
+        .cta-btn:hover {
+            background-color: #FFC300;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            animation: fadeIn 2s ease-in;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes textFadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes buttonBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>HealthCare Hospital</h1>
+        </div>
+        
+    </header>
+
+    <section class="hero-section">
+        <div class="content">
+            <h1>Your Health Matters To Us</h1>
+            <p>Delivering Excellence in Healthcare Services with Compassion and Care.</p>
+            <a href="login.html" class="cta-btn">Login to Access Your Account</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 HealthCare Hospital. All rights reserved.</p>
+    </footer>
+</body>
+</html>

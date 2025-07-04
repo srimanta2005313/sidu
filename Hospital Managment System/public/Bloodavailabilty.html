@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Availability Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #6C63FF;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #6C63FF;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5145cd;
+        }
+
+        .availability-section {
+            margin-top: 30px;
+        }
+
+        .availability-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .availability-table th,
+        .availability-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .availability-table th {
+            background-color: #6C63FF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="departments.html">Departments</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <h2>Check Blood Availability</h2>
+        <form id="bloodAvailabilityForm">
+            <div class="form-group">
+                <label for="patientName">Patient Name</label>
+                <input type="text" id="patientName" name="patientName" required>
+            </div>
+            <div class="form-group">
+                <label for="patientEmail">Patient Email</label>
+                <input type="email" id="patientEmail" name="patientEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="patientContact">Contact Number</label>
+                <input type="text" id="patientContact" name="patientContact" required>
+            </div>
+            <div class="form-group">
+                <label for="bloodType">Select Blood Type</label>
+                <select id="bloodType" name="bloodType" required>
+                    <option value="">--Select Blood Type--</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="urgency">Urgency Level</label>
+                <select id="urgency" name="urgency" required>
+                    <option value="">--Select Urgency--</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Urgent">Urgent</option>
+                    <option value="Critical">Critical</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Check Availability">
+            </div>
+        </form>
+
+        <div class="availability-section">
+            <h2>Available Blood Types</h2>
+            <table class="availability-table">
+                <thead>
+                    <tr>
+                        <th>Blood Type</th>
+                        <th>Available Units</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A+</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>A-</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>B+</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>B-</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>AB+</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>AB-</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>O+</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>O-</td>
+                        <td>7</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
